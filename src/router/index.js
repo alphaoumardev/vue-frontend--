@@ -15,21 +15,20 @@ const routes =
     component:Login
   },
   {
-    path:'/home',
-    component: () => import('../components/Home.vue'),
+    path:'/home',component: () => import('../components/Home.vue'),
     redirect:'/welcome',
     children:
     [
       { path:'/welcome',  component:() => import('../components/index/Welcome.vue') },
       { path:'/users',    component:() => import('../components/user/Users.vue') },
-        { path:'/rights', component:() => import('../components/power/Right.vue') },
-        { path:'/roles',  component:() => import('../components/power/Roles.vue') },
-        { path:'/params', component:() => import('../components/goods/Params.vue') },
-        { path:'/goods',  component:() => import('../components/goods/List.vue') },
-      { path:'/categories',component:() => import('../components/goods/Cate.vue') },
+      { path:'/rights',   component:() => import('../components/power/Right.vue') },
+      { path:'/roles',    component:() => import('../components/power/Roles.vue') },
+      { path:'/params',   component:() => import('../components/goods/Params.vue') },
+      { path:'/goods',    component:() => import('../components/goods/List.vue') },
       { path:'/goods/add',component:() => import('../components/goods/AddProduct.vue') },
-      // { path:'/goods/edit',component:() => import('../components/goods/Edit.vue') },
-      // { path:'/orders',component:() => import('../components/order/Orders.vue') },
+      { path:'/orders',   component:() => import('../components/orders/Orders.vue') },
+      { path:'/categories',component:() => import('../components/goods/Cate.vue') },
+      { path:'/goods/edit',component:() => import('../components/goods/EditProduct.vue') },
     ]
   }
 ]

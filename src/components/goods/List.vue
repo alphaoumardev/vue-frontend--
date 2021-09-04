@@ -27,7 +27,7 @@
                 <el-table-column align="center" label="Operations"   width="180">
                     <template slot-scope="scope">
                         <el-tooltip class="item" effect="dark" content="Edit the Product name" placement="top-start" :enterable="false">
-                            <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditDialog(scope.row.id)"/>
+                            <el-button type="primary" icon="el-icon-edit" size="mini" @click="toEditPage(scope.row.goods_id)"/>
                         </el-tooltip>
                         <el-tooltip class="item" effect="dark" content="delete the article" placement="top-start" :enterable="false">
                             <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteUserById(scope.row.goods_id)"/>
@@ -114,11 +114,7 @@
                     this.queryInfo.pagenum=pagenum
                     this.getGoodList()
                 },
-                showEditDialog()
-                {
-                    this.addDialogVisible=true
 
-                },
                 deleteUserById(id)
                 {
                     this.$confirm('Would you permanently delete this Article ?', 'Warning',
@@ -145,8 +141,11 @@
                 toAddPage()
                 {
                     this.$router.push("/goods/add")
-
-                }
+                },
+                toEditPage(id)
+                {
+                    this.$router.push("/goods/edit?id="+id)
+                },
             }
     }
 

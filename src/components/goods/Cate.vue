@@ -214,9 +214,9 @@
                         {
                             return this.$message.error("Updating categories has failed")
                         }
+                        this.addDialogVisible=false
                         this.$message.success("You successfully updated the good categories ")
                         await this.getCateList()
-                        this.addDialogVisible=false
                     })
                 },
                 async showEditCate(cate)
@@ -283,4 +283,5 @@
     .el-breadcrumb{font:20px bold;}
     .el-cascader{width:100%;}
     .tree-table{margin-top:20px;}
+    .page{text-align:center}
 </style>
