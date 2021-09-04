@@ -13,10 +13,11 @@
     </el-header>
 
     <el-container>
-      <!-- 侧边栏 -->
       <el-aside :width="isCollapse ? '64px' : '200px'">
-        <!-- 切换菜单的折叠和显示 -->
-          <div class="toggle-button" @click="isCollapse=!isCollapse"><h2>Callapse</h2></div>
+          <div class="toggle-button" @click="isCollapse=!isCollapse">
+            <h2 v-if="!isCollapse" class="el-icon-d-arrow-left"/>
+            <h2 v-else class="el-icon-d-arrow-right"/>
+          </div>
         <!-- 侧边栏菜单 -->
         <el-menu :default-active="$route.path" unique-opened router :collapse="isCollapse" :collapse-transition="false">
           <el-submenu :index="item.id +'' " v-for="item in menuList" :key="item.id">
@@ -31,7 +32,8 @@
         </el-menu>
       </el-aside>
       <el-main>
-          <router-view></router-view><!--the router view to the welcome page-->
+          <router-view/>
+        <!--the router view to the welcome page-->
       </el-main>
     </el-container>
   </el-container>
@@ -66,10 +68,10 @@ export default
   methods: {
     // 退出
     logout() {
-      this.$confirm("确定要退出登陆吗？", "提示",
+      this.$confirm("Do you confirm to log out? ？", "warning",
           {
-            confirmButtonText: "确定",
-            cancelButtonText: "取消",
+            confirmButtonText: "Yes",
+            cancelButtonText: "Cancel",
             type: "warning",
           })
         .then(() => { sessionStorage.clear()
@@ -97,7 +99,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-i{color:forestgreen; font-weight: bold;}
+i{color:black; font-weight: bold;}
 .el-container
 {
   height: 100%;
@@ -141,14 +143,15 @@ i{color:forestgreen; font-weight: bold;}
     }
   }
   .toggle-button{
-      background: #bd2c00;
-      font-size: 10px;
-      line-height: 24px;
+      background: red;
+      font-size: 20px;
+      line-height: 20px;
       text-align: center;
       color: white;
       cursor: pointer;
-      height:30px;
+      /*height:30px;*/
   }
+  #arrow{}
 }
 .el-main{
     background: #e9e9e9;

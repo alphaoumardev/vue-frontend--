@@ -98,7 +98,7 @@
                 },
                 async getOrderList()
                 {
-                    const {data:res}= await this.$http.get('orders',{params:{pagenum:1,pagesize:1}})
+                    const {data:res}= await this.$http.get('orders')
                     if(res.meta.status!==200)
                     {
                         return this.$message.error("You have an error to get the total of the users")
@@ -178,7 +178,6 @@
                                 data[key] += item.order_price
                             }
                         }
-                        console.log(data)
                     })
                 //
                 //     // 将数据添加到option中
@@ -279,7 +278,7 @@
     p{font-size:16px;font-weight:bold;}
     .number{font-size:25px;font-weight: bold; text-align:center;}
 
-    .echarts{display:flex;justify-content: space-between;margin-top:10px; }
+    .echarts{display:flex;justify-content: space-between; margin-top:10px; color:green; }
     .el-card{height:400px; width:50%;padding:20px; margin:0 8px;}
 
 </style>
