@@ -47,11 +47,9 @@
                 </div>
             </el-col>
         </el-row>
-        <div class="charts">
+        <div class="echarts">
             <el-card id="chart1"></el-card>
             <el-card id="chart2"></el-card>
-
-
         </div>
     </div>
 </template>
@@ -127,7 +125,7 @@
                         {
                         title:
                         {
-                            text: 'Order Stage',
+                            text: 'Order Tendance',
                         },
                         tooltip:
                         {
@@ -180,6 +178,7 @@
                                 data[key] += item.order_price
                             }
                         }
+                        console.log(data)
                     })
                 //
                 //     // 将数据添加到option中
@@ -193,7 +192,79 @@
                 },
                 initChart2()
                 {
+                    const chart2 = echarts.init(document.getElementById('chart2'));
 
+// 订单状态
+                   let option =
+                   {
+                        title:
+                        {
+                            text: 'Order Status',
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{b} : {c} ({d}%)',
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'right',
+                            data: [],
+                        },
+                        series: [
+                            {
+                                name: 'Status',
+                                type: 'pie',
+                                radius: '55%',
+                                center: ['50%', '60%'],
+                                // data: [
+                                //     {value: 335, name: '直接访问'},
+                                //     {value: 310, name: '邮件营销'},
+                                //     {value: 234, name: '联盟广告'},
+                                //     {value: 135, name: '视频广告'},
+                                //     {value: 1548, name: '搜索引擎'}
+                                // ],
+                                data: [],
+                                emphasis: {
+                                    itemStyle: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)',
+                                    },
+                                },
+                            },
+                        ],
+                    }
+
+                    let data =
+                        [
+                            {
+                                name:'Paid',
+                                value: 0,
+                            },
+                            {
+                                name:'Unpaid',
+                                value: 0,
+                            },
+                        ]
+                    this.orderList.forEach((item) =>
+                    {
+                        if (item.pay_status === '1')
+                        {
+                            data[0].value++
+                        }
+                        else
+                        {
+                            data[1].value++
+                        }
+                    })
+                    //     // 将数据添加到option中
+                    for (let item of data)
+                    {
+                        option.legend.data.push(item.name)
+                        option.series[0].data.push(item)
+                    }
+                    //
+                    chart2.setOption(option)
                 }
 
             }
@@ -208,6 +279,7 @@
     p{font-size:16px;font-weight:bold;}
     .number{font-size:25px;font-weight: bold; text-align:center;}
 
-    .el-card{display:flex;justify-content: space-between;margin-top:10px;padding:0 10px; width:50%; height:400px;}
+    .echarts{display:flex;justify-content: space-between;margin-top:10px; }
+    .el-card{height:400px; width:50%;padding:20px; margin:0 8px;}
 
 </style>
