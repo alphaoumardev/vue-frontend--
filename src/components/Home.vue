@@ -153,5 +153,5 @@ i{color:forestgreen; font-weight: bold;}
 .el-main{
     background: #e9e9e9;
 }
-    .el-container,.el-aside,.el-menu{background:dodgerblue;}
+    .el-container,.el-aside,.el-menu{background:darkgray;}
 </style>

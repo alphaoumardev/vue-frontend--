@@ -40,7 +40,7 @@ import ZkTable from 'vue-table-with-tree-grid'
 Vue.component('tree-table', ZkTable)
 
 // 工具库
-import utils from './utils/utils'
+import utils from './libs/utils'
 Vue.prototype.$utils = utils
 
 // 导入富文本编辑器

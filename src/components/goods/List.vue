@@ -93,10 +93,10 @@
                         return this.$message.error("Getting the goods list has failed")
                     }
 
-                    // for(const item of res.meta.goods)
-                    // {
-                    //     item.add_time = this.$utils.formatTime(item.add_time)
-                    // }
+                    for (let item of res.data.goods)
+                    {
+                        item.add_time = this.$utils.formatToTime(item.add_time)
+                    }
                     this.goodList=res.data.goods
                     this.total=res.data.total
                     console.log(this.goodList)

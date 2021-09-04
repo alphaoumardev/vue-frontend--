@@ -153,6 +153,8 @@
                     res.data.goods.forEach(item =>
                     {
                         // item.create_time = new Date()
+                        item.create_time = this.$utils.formatToTime(item.create_time)
+
                         item.detail=[]
                     })
                     this.orderList=res.data.goods
