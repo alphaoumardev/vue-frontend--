@@ -1,4 +1,7 @@
-<template>
+<template >
+    <div class="back" >
+
+
   <el-container>
     <!-- 头部 -->
     <el-header>
@@ -37,6 +40,7 @@
       </el-main>
     </el-container>
   </el-container>
+    </div>
 </template>
 
 <script>
@@ -104,9 +108,10 @@ i{color:black; font-weight: bold;}
 {
   height: 100%;
 }
+.back{}
 .el-header
 {
-  background: url("../assets/imgs/header_bg.gif") repeat-x center;
+  background: url("../assets/imgs/OIP.jpg") repeat-x center;
   height: 50px !important;
   display: flex;
   justify-content: space-between;
@@ -154,7 +159,7 @@ i{color:black; font-weight: bold;}
   #arrow{}
 }
 .el-main{
-    background: #e9e9e9;
+    background: url("../assets/imgs/background.jpg");
 }
-    .el-container,.el-aside,.el-menu{background:darkgray;}
+    .el-container,.el-aside,.el-menu{background:antiquewhite;}
 </style>

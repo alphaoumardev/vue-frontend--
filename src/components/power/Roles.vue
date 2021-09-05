@@ -3,7 +3,7 @@
         <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/home' }">Home</el-breadcrumb-item>
             <el-breadcrumb-item :to="{ path: '/rights'}">Right list</el-breadcrumb-item>
-            <el-breadcrumb-item>Right Management</el-breadcrumb-item>
+            <el-breadcrumb-item>User Roles</el-breadcrumb-item>
         </el-breadcrumb>
         <!--The card box-->
         <el-card class="box-card">

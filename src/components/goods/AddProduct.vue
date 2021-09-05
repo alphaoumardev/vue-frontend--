@@ -4,7 +4,7 @@
         <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/home' }">Home</el-breadcrumb-item>
             <el-breadcrumb-item :to="{ path: '/goods'}">Product list</el-breadcrumb-item>
-            <el-breadcrumb-item>Product Management</el-breadcrumb-item>
+            <el-breadcrumb-item>Add Product</el-breadcrumb-item>
         </el-breadcrumb>
         <el-card class="box-card">
             <el-alert title="Please fill the product details below" :closable="false" center type="success" show-icon/>

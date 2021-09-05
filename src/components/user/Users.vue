@@ -20,10 +20,10 @@
             </el-row>
 <!-- The table of contents-->
             <el-table  :data="userList" border class="the"  style="width: 100%">
-                <el-table-column align="center" label="No."   type="index"       width="80"/>
-                <el-table-column align="center" label="Name"    prop="username"  width="180"/>
-                <el-table-column align="center" label="Email"   prop="email"     width="180"/>
-                <el-table-column align="center" label="Contact" prop="mobile"    width="180"/>
+                <el-table-column align="center" label="No."   type="index"       />
+                <el-table-column align="center" label="Name"    prop="username" />
+                <el-table-column align="center" label="Email"   prop="email"    />
+                <el-table-column align="center" label="Contact" prop="mobile"   />
                 <el-table-column align="center" label="Role"    prop="role_name" width="160"/>
                 <el-table-column align="center" label="Status"   width="100">
                     <template slot-scope="scope">
@@ -35,7 +35,7 @@
                     </template>
                 </el-table-column>
 
-                <el-table-column align="center" label="Settings"  prop=""  width="220">
+                <el-table-column align="center" label="Settings"  prop=""  >
                     <template slot-scope="scope">
                         <el-tooltip class="item" effect="dark" content="Edit user" placement="top-start" :enterable="false">
                             <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditDialog(scope.row.id)"/>

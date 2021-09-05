@@ -280,5 +280,6 @@
 
     .echarts{display:flex;justify-content: space-between; margin-top:10px; color:green; }
     .el-card{height:400px; width:50%;padding:20px; margin:0 8px;}
+    #chart1,#chart2{background-color:#b3d4fc;}
 
 </style>

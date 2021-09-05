@@ -4,7 +4,7 @@
         <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/home' }">Home</el-breadcrumb-item>
             <el-breadcrumb-item :to="{ path: '/users'}">User list</el-breadcrumb-item>
-            <el-breadcrumb-item>User Management</el-breadcrumb-item>
+            <el-breadcrumb-item>Articles List</el-breadcrumb-item>
         </el-breadcrumb>
         <el-card class="box-card">
             <el-row :gutter="20" >
