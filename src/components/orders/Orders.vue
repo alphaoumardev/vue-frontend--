@@ -27,11 +27,11 @@
                                     <el-popover  placement="top-start"  trigger="hover"  >
                                         <img :src="scope.row.url" style="width:500px; height:500px;" />
                                         <img :src="scope.row.url" slot="reference" style="width:70px; height:70px;" />
-
                                     </el-popover>
+
                                 </template>
                             </el-table-column>
-                            <el-table-column align="center"        label="Product Name" prop="goods_name"/>
+                            <el-table-column align="center" label="Product Name" prop="goods_name"/>
                             <el-table-column align="center" width="100px" label="Stock" prop="goods_number"/>
                             <el-table-column align="center" width="100px" label="Weight (kg)" prop="goods_weight"/>
                             <el-table-column align="center" width="100px" label="Price (元)" prop="goods_price"/>

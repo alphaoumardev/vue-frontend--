@@ -84,7 +84,7 @@
             onlyData:[],
             previewVisible:false,
             previewPath:"",
-            uploadUrl:"http://www.tangxiaoyang.vip:8888/api/v2/upload",
+            uploadUrl:"https://www.tangxiaoyang.vip:8888/api/v2/upload",
             headersAtt:
                 {
                     Authorization:JSON.parse(sessionStorage.getItem('userInfo')).token

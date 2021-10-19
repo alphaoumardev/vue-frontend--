@@ -111,7 +111,7 @@ i{color:black; font-weight: bold;}
 .back{}
 .el-header
 {
-  background: url("../assets/imgs/OIP.jpg") repeat-x center;
+  background: url("../assets/imgs/background.jpg") repeat-x center;
   height: 50px !important;
   display: flex;
   justify-content: space-between;
@@ -159,7 +159,7 @@ i{color:black; font-weight: bold;}
   #arrow{}
 }
 .el-main{
-    background: url("../assets/imgs/background.jpg");
+    background-image: url("../assets/imgs/shop.jpg");
 }
     .el-container,.el-aside,.el-menu{background:antiquewhite;}
 </style>
